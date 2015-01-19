@@ -1,0 +1,9 @@
+db_name		= symap
+db_server = localhost
+db_adminuser = 
+db_adminpasswd =
+db_clientuser       = 
+db_clientpasswd     = 
+
+
+
