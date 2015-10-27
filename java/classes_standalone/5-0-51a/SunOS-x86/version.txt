@@ -1,0 +1,1 @@
+mysql-5.0.51a-solaris8-i386/bin/mysqld
