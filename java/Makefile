@@ -1,1 +1,79 @@
-Makefile.release
+APPLET_SUFFIX= #17
+
+#JAVA_PATH=/usr/java/latest
+#JAVA_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home
+JAVAC_FLAGS = -g #,vars #-Xlint:deprecation
+
+# fill in these and uncooment jarsigner lines to add digicert
+#KEYSTORE=<location>/digicert.jks
+#KEYPASS=
+#KEYALIAS=server
+
+# Note, other files are picked up through dependencies, but if a file is added
+# that isn't a dependency of one of these, then it won't be built
+JAVA_FILES=./src/symap/*.java  ./src/symapCE/*.java ./src/dotplot/*.java \
+           ./src/symapCE/*.java  ./src/backend/*.java ./src/symapMultiAlign/*.java \
+           ./src/symapQuery/*.java  ./src/symap3D/*.java ./src/blockview/*.java \
+./src/symap/projectmanager/common/*.java ./src/circview/*.java
+
+
+all: clean code jars clean_classes
+
+code: 
+	javac $(JAVAC_FLAGS) -classpath ./classes_both:./classes_standalone:./classes_applet:./classes_3d:./classes_freehep \
+                         -sourcepath ./src -d ./classes $(JAVA_FILES) 
+
+jars: applet_jar standalone_jars applet3d_jar
+
+standalone_jars:
+	rm -f jar/symap.jar jar/symap3D.jar
+	jar -cf jar/symap.jar -C ./classes . -C ./src html -C ./src properties -C ./src images -C ./classes_symap . 
+	jar -cf jar/symap3D.jar -C ./classes . -C ./src html -C ./src properties -C ./src images -C ./classes_symap3D . 
+
+applet_jar:
+	rm -f jar/symapApplet*.jar
+	jar -cfm jar/symapApplet$(APPLET_SUFFIX).jar manifest.add -C ./classes . -C ./src html -C ./src properties -C ./src images -C ./classes_symapApplet . 
+	#jarsigner -tsa http://timestamp.digicert.com -keystore $(KEYSTORE) -storepass $(KEYPASS) jar/symapApplet$(APPLET_SUFFIX).jar $(KEYALIAS)
+
+applet3d_jar:
+	rm -f jar/symapApplet3D*.jar
+	jar -cfm jar/symapApplet3D$(APPLET_SUFFIX).jar manifest.add -C ./classes . -C ./src html -C ./src properties -C ./src images -C ./classes_symap3DApplet . 
+	#jarsigner -tsa http://timestamp.digicert.com -keystore $(KEYSTORE) -storepass $(KEYPASS) jar/symapApplet3D$(APPLET_SUFFIX).jar $(KEYALIAS)
+
+applet: code applet_jar
+
+class_dirs:
+	rm -rf classes_symap/* classes_symap3D/* 
+	rm -rf classes_symapApplet/* classes_symap3DApplet/*
+	# standalone, no 3D
+	cp -R classes_both/* classes_symap
+	cp -R classes_standalone/* classes_symap
+	cp -R classes_freehep/* classes_symap
+	# 3D : contains all of standalone as well
+	cp -R classes_symap/* classes_symap3D
+	cp -R classes_3d/* classes_symap3D
+	# applet
+	cp -R classes_both/* classes_symapApplet
+	cp -R classes_freehep/* classes_symapApplet
+	cp -R classes_applet/* classes_symapApplet
+	# 3D applet
+	cp -R classes_both/* classes_symap3DApplet
+	cp -R classes_freehep/* classes_symap3DApplet
+	cp -R classes_applet/* classes_symap3DApplet
+	cp -R classes_3d/* classes_symap3DApplet
+
+libs:
+	rm -rf lib_jar*
+	rm -f libs3D.jar
+	mkdir lib_jar
+	cp lib/amd64/* lib_jar
+	cp lib/osx/* lib_jar
+	cp lib/i386/*.dll lib_jar
+	jar -cfm libs3D.jar ./manifest.libs.add -C lib_jar . 
+	jarsigner -tsa http://timestamp.digicert.com -keystore $(KEYSTORE) -storepass $(KEYPASS) libs3D.jar $(KEYALIAS)
+
+	
+clean_classes:
+	rm -fr classes/* 
+clean:
+	rm -fr classes/*  jar/symap*.jar 
