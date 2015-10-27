@@ -1,0 +1,140 @@
+The `./data/` path is the same as in `symap_42.tar.gz`.
+See https://github.com/BioInfoTools/symap/releases/tag/4.2
+
+------
+
+total 8
+drwxr-xr-x@  7 staff   238 Oct 27 18:52 .
+drwxr-xr-x@ 15 staff   510 Oct 27 18:55 ..
+drwxr-xr-x@  3 staff   102 Oct 27 18:52 fpc
+drwxr-xr-x@  2 staff    68 Jan 18  2015 fpc_pseudo
+drwxr-xr-x@  5 staff   170 Jan 18  2015 pseudo
+drwxr-xr-x@  2 staff    68 Jan 18  2015 pseudo_pseudo
+
+data/fpc:
+total 0
+drwxr-xr-x@ 3 staff  102 Oct 27 18:52 .
+drwxr-xr-x@ 7 staff  238 Oct 27 18:52 ..
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 demo_fpc
+
+data/fpc/demo_fpc:
+total 46784
+drwxr-xr-x@ 5 staff       170 Jan 18  2015 .
+drwxr-xr-x@ 3 staff       102 Oct 27 18:52 ..
+-rw-r--r--@ 1 staff  23947183 Jan 18  2015 demo_fpc.fpc
+-rw-r--r--@ 1 staff       399 Jan 18  2015 params
+drwxr-xr-x@ 4 staff       136 Jan 18  2015 sequence
+
+data/fpc/demo_fpc/sequence:
+total 0
+drwxr-xr-x@ 4 staff  136 Jan 18  2015 .
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 ..
+drwxr-xr-x@ 3 staff  102 Jan 18  2015 bes
+drwxr-xr-x@ 3 staff  102 Jan 18  2015 mrk
+
+data/fpc/demo_fpc/sequence/bes:
+total 130832
+drwxr-xr-x@ 3 staff       102 Jan 18  2015 .
+drwxr-xr-x@ 4 staff       136 Jan 18  2015 ..
+-rw-r--r--@ 1 staff  66983227 Jan 18  2015 bes.seq
+
+data/fpc/demo_fpc/sequence/mrk:
+total 12072
+drwxr-xr-x@ 3 staff      102 Jan 18  2015 .
+drwxr-xr-x@ 4 staff      136 Jan 18  2015 ..
+-rw-r--r--@ 1 staff  6177543 Jan 18  2015 marker.seq
+
+data/fpc_pseudo:
+total 0
+drwxr-xr-x@ 2 staff   68 Jan 18  2015 .
+drwxr-xr-x@ 7 staff  238 Oct 27 18:52 ..
+
+data/pseudo:
+total 0
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 .
+drwxr-xr-x@ 7 staff  238 Oct 27 18:52 ..
+drwxr-xr-x@ 4 staff  136 Jan 18  2015 demo_draft
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 demo_seq
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 demo_seq2
+
+data/pseudo/demo_draft:
+total 8
+drwxr-xr-x@ 4 staff  136 Jan 18  2015 .
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 ..
+-rw-r--r--@ 1 staff  323 Jan 18  2015 params
+drwxr-xr-x@ 3 staff  102 Jan 18  2015 sequence
+
+data/pseudo/demo_draft/sequence:
+total 0
+drwxr-xr-x@ 3 staff  102 Jan 18  2015 .
+drwxr-xr-x@ 4 staff  136 Jan 18  2015 ..
+drwxr-xr-x@ 3 staff  102 Jan 18  2015 pseudo
+
+data/pseudo/demo_draft/sequence/pseudo:
+total 134072
+drwxr-xr-x@ 3 staff       102 Jan 18  2015 .
+drwxr-xr-x@ 3 staff       102 Jan 18  2015 ..
+-rw-r--r--@ 1 staff  68643599 Jan 18  2015 draft.seq
+
+data/pseudo/demo_seq:
+total 8
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 .
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 ..
+drwxr-xr-x@ 6 staff  204 Jan 18  2015 annotation
+-rw-r--r--@ 1 staff  319 Jan 18  2015 params
+drwxr-xr-x@ 3 staff  102 Jan 18  2015 sequence
+
+data/pseudo/demo_seq/annotation:
+total 9888
+drwxr-xr-x@ 6 staff      204 Jan 18  2015 .
+drwxr-xr-x@ 5 staff      170 Jan 18  2015 ..
+-rw-r--r--@ 1 staff      136 Jan 18  2015 centromere.gff
+-rw-r--r--@ 1 staff  3345511 Jan 18  2015 exons.gff
+-rw-r--r--@ 1 staff      574 Jan 18  2015 gaps.gff
+-rw-r--r--@ 1 staff  1706183 Jan 18  2015 genes.gff
+
+data/pseudo/demo_seq/sequence:
+total 0
+drwxr-xr-x@ 3 staff  102 Jan 18  2015 .
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 ..
+drwxr-xr-x@ 4 staff  136 Jan 18  2015 pseudo
+
+data/pseudo/demo_seq/sequence/pseudo:
+total 133088
+drwxr-xr-x@ 4 staff       136 Jan 18  2015 .
+drwxr-xr-x@ 3 staff       102 Jan 18  2015 ..
+-rw-r--r--@ 1 staff  37723080 Jan 18  2015 chr3.seq
+-rw-r--r--@ 1 staff  30414511 Jan 18  2015 chr5.seq
+
+data/pseudo/demo_seq2:
+total 8
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 .
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 ..
+drwxr-xr-x@ 4 staff  136 Jan 18  2015 annotation
+-rw-r--r--@ 1 staff  320 Jan 18  2015 params
+drwxr-xr-x@ 3 staff  102 Jan 18  2015 sequence
+
+data/pseudo/demo_seq2/annotation:
+total 24472
+drwxr-xr-x@ 4 staff      136 Jan 18  2015 .
+drwxr-xr-x@ 5 staff      170 Jan 18  2015 ..
+-rw-r--r--@ 1 staff  6923869 Jan 18  2015 chr01.gff
+-rw-r--r--@ 1 staff  5601250 Jan 18  2015 chr03.gff
+
+data/pseudo/demo_seq2/sequence:
+total 0
+drwxr-xr-x@ 3 staff  102 Jan 18  2015 .
+drwxr-xr-x@ 5 staff  170 Jan 18  2015 ..
+drwxr-xr-x@ 4 staff  136 Jan 18  2015 pseudo
+
+data/pseudo/demo_seq2/sequence/pseudo:
+total 293240
+drwxr-xr-x@ 4 staff       136 Jan 18  2015 .
+drwxr-xr-x@ 3 staff       102 Jan 18  2015 ..
+-rw-r--r--@ 1 staff  74763645 Jan 18  2015 chr1.seq
+-rw-r--r--@ 1 staff  75371681 Jan 18  2015 chr3.seq
+
+data/pseudo_pseudo:
+total 0
+drwxr-xr-x@ 2 staff   68 Jan 18  2015 .
+drwxr-xr-x@ 7 staff  238 Oct 27 18:52 ..
