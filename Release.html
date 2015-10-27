@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>SyMAP Release Notes</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style>
+a.wt {color:inherit;}
+table {font-size:100%}
+tr {font-size:100%}
+td {font-size:100%}
+tt {font-size:13px}
+pre {font-size:13px}
+a {font-size:100%}
+</style>
+</HEAD>
+<BODY bgcolor="#FFFFFF" text="#000000" style="font-family:Verdana, Arial, Helvetica, sans-serif;font-size:100%">
+
+<table width="750"  style="border: 1px solid #999999" align="center" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+	<tr>
+  		<td width="100%" style="background-color: #CCCCCC;">
+	  		<a href="http://www.arizona.edu">
+    			<img border="0" alt="" title="" src="/img/UA_A-line-css_LTG.gif">
+	  		</a>
+  		</td>
+  	</tr>
+  <tr> 
+    <td>
+      <table border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td  height="60" width="161" align="left" valign="bottom"> 
+           <img src="/img/agcol_logo.gif" ></td>
+          <td  height="60" width="428" align="left" valign="bottom"
+				style="padding:0px 0px 10px 30px"> 
+			<font face="Verdana, Arial, Helvetica, sans-serif" color="#000066" size="5">
+            <b>SyMAP Release Information</b></font></td>
+          <td  height="60" width="161" align="center" valign="bottom">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td height="21" colspan="3" align="left"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="3" height="18">
+             <tr> 
+               <td align="left" bgcolor="#666666"> 
+ <span style="font-size:75%;color:white">
+<a href="http://www.agcol.arizona.edu" class="wt">AGCoL Home</a> |
+<a href=../index.html class="wt">Software</a> |
+Release Notes |
+<a href=SystemGuide.html class="wt">System Guide</a> |
+<a href=UserGuide.html class="wt">User Guide</a> |
+<a href=Tour.html class="wt">Tour</a> |
+<a href=TroubleShoot.html class="wt">Troubleshooting </a>
+</span>               </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+
+      <table width="97%" border="0" cellspacing="0" align="center">
+        <tr>
+          <td style='padding-left:10px;'>
+<p>
+<font face="Verdana, Arial, Helvetica, sans-serif" color="#000000" size="2"> 
+<big><b><u>Version 4.2</u></b></big><br>
+Release date:  4/23/2014
+<p>
+<i>Bugfix 5/28/14 (build 115):</i> Fix error in sizing of last chromosome in circle view display
+<p><b>New Features:</b>
+<ul>
+<li> New, unified web access applet interface. Now you can present a unified SyMAP web display of some or all
+of the projects in your database using just one small HTML page (no CGI). Applet interfaces are also
+available for each of the sub-functions (dotplot, circle view, etc.) enabling customized web displays. 
+</ul>
+<p>
+<b>Modified Features:</b>
+<ul>
+<li> The Explorer has been updated to be more usable for draft projects, i.e. when there are many
+sequences that have not been ordered and anchored to pseudomolecules. Specifically, it will now show 
+up to 450 sequences, and to decrease clutter it shows only sequences that actually have a synteny block. 
+<li> The prior web system files have been removed, including the cgi and supporting perl modules. 
+<li> The circle view now draws all text labels horizontally, due to rendering problems
+with rotated text on several platforms (most severely on Mac). The rotated text is still available through a  
+checkbox option.
+It is no longer necessary to run the perl install script to install web functionality. 
+</ul>
+<big><b><u>Version 4.1</u></b></big><br>
+Release date:  2/20/2014<br>
+<p><b>New Features:</b>
+<ul>
+<li> Publication-quality image saving. A save button has been added to every graphical window allowing saving to 
+a wide variety of formats, including scalable vector formats (svg, eps, pdf) which may be resized clearly to any size. (Many thanks to the developers of the FreeHEP Vector Graphics library, and especially Mark Donszelmann, for making this possible!)
+<li> Download of block co-ordinates. Choose the species of interest, open the Explorer, and the download button is at the lower left.
+</ul>
+<p>
+<b>Modified Features:</b>
+<p>
+<ul>
+<li> Applet is signed with a DigiCert certificate, removing the security blocks which have been increasing
+in recent Java versions.
+<li> MUMmer binaries for Mac OSX have been replaced by 64-bit versions. The 32-bit versions which had been
+supplied could not access more than 2G RAM, preventing alignment of many chromosomes. 
+
+</ul>
+<p>
+<big><b><u>Version 4.0</u></b></big><br>
+Release date:  7/15/2012<br>
+<p><b>New Features:</b>
+<ul>
+<li>Project Manager Enhancements
+<ul>
+<li> Create new projects through the Manager 
+<li> No need to create directories or copy files
+<li> Alignment & Synteny parameters also available
+</ul>
+<li>Query Page Enhancements
+<ul>
+<li> Compute putative gene families across species 
+<li> Many additional filters
+<li> Create and view Muscle multiple-alignment for selected results
+</ul>
+<li>Additional Features
+<ul>
+<li>Script 3track_figure.pl makes 3-genome figure for publication (see online 
+<a href="Tour.html#svg">Tour</a>;
+script added to 4.0 package post-release) 
+</ul>
+</ul>
+<p>
+<b>Modified Features:</b>
+<ul>
+<li> Write contig anchoring information to a file (<tt>order_against</tt> mode)
+<li> No longer creates the "_ordered" project output from <tt>order_against</tt>
+<li><tt>grp_prefix</tt> parameter now optional (but recommended). <tt>grp_sort</tt> eliminated.
+<li> Self-alignments improved by using -maxmatch option of MUMmer for individual chromsome self-alignments
+<li> Top-2 filtering modified to accept also hits within 80% of the 2nd best score, in order to 
+retain gene-family hits and allow identification of families through the query interface.
+</ul>
+<p>
+<big><b><u>Version 3.5</u></b></big><br>
+Release date:  1/24/12<br>
+<p><b>New Features:</b>
+<ul>
+<li>Dynamic circular display
+<ul>
+<li> Circular-style view allowing addition/removal of species and chromosomes
+<li> Replaces 3D view in the web applet (removing problems of MacOS support for 3D)
+<li> 3D still available in standalone mode
+</ul>
+<li> Annotation query interface (Java-based, upgrades the web CGI version)
+<li> Project parameters editing window
+<li> Unsigned web applet (no approval popups, if database and webserver have same host)
+<li> For draft sequence using <tt>order_against</tt>, create ordered and anchored versions of the project
+</ul>
+<p><b>Modified Features:</b>
+<ul>
+<li> Added contig-flipping to draft sequence <tt>order_against</tt> function
+<li> Added draft sequence ordering demo
+<li> Improved command-line launch script
+</ul>
+<p>
+<big><b><u>Version 3.4</u></b></big><br>
+Release date:  12/14/10<br>
+<p><b>Modified Features:</b>
+<ul>
+<li>Query files catenated before running MUMmer, for substantial increase in speed.
+<li>Batch alignment buttons added to Project Manager.
+<li>Improvements to handling of unordered scaffolds, including:
+<ul>
+<li>Scaffolds can all be in one fasta file.
+<li>Added min_size parameter, to specify minimum size scaffold to load.
+<li>Added order_against parameter, to specify reference sequence for ordering scaffolds
+	(the order only affects the dotplot display)
+</ul>
+<li>Minor changes to CGI page displays to better accomodate unordered.
+<li>Fix compilation error in 64-bit MUMmer binary, which prevented use of very long pseudomolecules.
+</ul>
+</ul>
+<p>
+<font face="Verdana, Arial, Helvetica, sans-serif" color="#000000" size="2"> 
+<big><b><u>Version 3.3</u></b></big><br>
+Release date:  10/4/10<br>
+<p><b>Modified Features:</b>
+<ul>
+<li>Added "no_overlapping_blocks" parameter
+<li>Added printout of block and synteny anchor tables to "/results" directory
+<li>Remove "Contig0" (singleton clones) from FPC displays
+<li>Adjustments to unannotated sequence clustering to obtain larger clusters,
+    not dependent on the order of scanning of MUMmer output files.
+<li>When clicking a block in the dot plot, 2D view will open with hit filter setting "show only synteny hits" 
+<li>Some bug-fixes to search.cgi 
+</ul>
+
+<p>
+<font face="Verdana, Arial, Helvetica, sans-serif" color="#000000" size="2"> 
+<big><b><u>Version 3.2</u></b></big><br>
+Release date:  6/9/10<br>
+<p><b>Modified Features:</b>
+<ul>
+<li>Inversions are shown on the 3D view in green, where un-inverted are shown in red.
+<li>Anchor chains are not merged.
+<li>The dot plot background is white and the synteny blocks blue.
+<li>SyMAP automatically only uses one processor unless specified otherwise with the -p option.
+<li>The whole genome dot plot is available from the project manager.
+<li>When running an alignment, a summary is listed to the terminal and to a log file.
+<li>A lot of error checking has been added. However, every platform can have variations, which
+we may not have accounted for. <font color=green>So PLEASE, let us know if you have any problems and we will
+work with you to it.</font>
+</ul>
+
+<font face="Verdana, Arial, Helvetica, sans-serif" color="#000000" size="2"> 
+<big><b><u>Version 3.1</u></b></big><br>
+Release date:  2/12/10<br>
+This release includes major enhancements to the Dot Plot view.<br>
+<br>
+<b>New Features:</b>
+<ul>
+<li>Multi-genome Dot Plot: multiple species can be displayed on the y-axis against a common reference species.</li>
+<li>Dot Plot view integrated into 3D viewer, now the species/chromosomes displayed in the Dot Plot can be changed on-the-fly.</li>
+<li>Dot Plot reference species on the x-axis can be changed dynamically via a new drop-down menu.</li>
+<li>Main web page redesigned.</li>
+</ul>
+</font>
+<p><br>
+
+
+<font face="Verdana, Arial, Helvetica, sans-serif" color="#000000" size="2"> 
+<big><b><u>Version 3.0</u></b></big><br>
+Release date:  1/7/10<br>
+This major release includes many new features, in particular the 3D viewer and Project Manager.<br>
+<br>
+<b>New Features in User Interface:</b>
+<ul>
+<li>Multi-genome 3D viewer.</li>
+<li>Circular CGI view.</li>
+<li>Gene search CGI.</li>
+<li>Support for sequence-to-sequence alignment.<li>
+<li>Option to flip sequence.</li>
+<li>Zoom into sequence or hit regions using the mouse scroll wheel.</li>
+<li>Three-track CGI blocks view.</li>
+<li>Improved annotation display and addition of URL-embedding capability.</li>
+</ul>
+<b>New Features in Back-End Processing:</b>
+<ul>
+<li>Completely rewritten in Java with major performance improvement.</li>
+<li>Addition of Project Manager GUI to simplify and automate back-end processing, sequence alignment, and synteny analysis.</li>
+<li>Support for sequence-to-sequence alignment.<li>
+<li>Hits are now clustered based on gene annotation and drawn as "ribbons" to indicate locations of sub-blocks.</li>
+</ul>
+</font>
+<p><br>
+
+
+<font face="Verdana, Arial, Helvetica, sans-serif" color="#000000" size="2"> 
+<big><b><u>Version 2.0</u></b></big><br>
+Release date:  5/18/07<br>
+This release includes many new features for the alignment view.  The dot plot view was 
+not changed.<br>
+
+<br>
+<b>New Features Block view (CGI):</b><br>
+<ul>
+<li> <i>View reverse</i> option: reverse which of the two genomes is the reference genome.
+<li> Chromosome view: the blocks are color coded to indicate which chromosome they are from. Also, the number of anchors is displayed over each block.
+</ul>
+
+<b>New Features on Java interface:</b><br>
+<ul>
+<li> Filters: 
+<ul>
+<li> For a given track (Block, Hit, Sequence) hover the mouse over the track and
+right click. A menu of the most common filters is shown; 
+this is much easier than opening up the Filter window.
+<li> From this window, you can go directly to the help for the given track.
+There is also a 'Navigation Help', as there are many ways to resize, scroll, etc.
+</ul>
+<li> Sequence track:
+<ul>
+<li> <i>Show hit score bar</i> is a new filter that
+shows the hits down the length of the sequence as a histogram showing how strong each hit is.
+
+<li> <i>Show Hit Score Value</i> is a new filter that shows the %identity.
+Note that the sequence graphic is twice as wide to show the score bar and score value.
+<li> The sequence track can be scrolled by moving the mouse wheel when the 
+mouse is position over the sequence track. 
+This retains the same zoom and filters, but moves up or down the lenght of the sequence (i.e. pseudomolecule).
+<li> The gene annotation now shows the intron/exon structure.
+</ul>
+<li> Hit track:
+<ul>
+<li> <i>Show Only Gene Hits (contained)</i> is a new filter that turns off the
+display of all hits unless they are contained in an annotated gene.
+<li> <i>Show Only Gene Hits (overlap)</i> is a new filter that turns off the
+display of all hits unless they overlap an annotated gene (but is not contained in a gene).
+
+<li> <i>Show Only Non-Gene</i> is a new filter that turns off the
+display of all hits unless they are NOT overlapping or contained in a gene.
+<li> Hit lines are highlighted in red when mouse positioned over a hit.
+</ul>
+<li> Block track:
+<ul>
+<li> When hovering over a contig, the contig information at the bottom of the
+display includes all the chromosomes that the contig hits.
+</ul>
+<li>Bug Fixes:
+<ul>
+<li> Genes drawn incorrectly when sequence range within gene boundary.<br>
+<li> Fixed bug with pseudomolecule filter.<br>
+<li> Certain queries were failing when used with MySQL 5.0.26 due to comma precedence change.<br>
+</ul>
+</ul>
+<b>New Features in Back-End Processing:</b><br>
+<ul>
+<li> Support for mixed letter/number chromosome names and arbitrary ordering (see example in demo-fpc params file)
+<li> Pseudomolecule sequences loaded in 1Mb chunks, removing database problems with large text fields
+<li> Filtering optimized in anchors.pl to reduce memory use in loading large blat outputs
+</ul>
+</font>
+<p><br>
+
+<font face="Verdana, Arial, Helvetica, sans-serif" color="#000000" size="2"> 
+<big><b><u>Version 1.0</u></b></big><br>
+Release date:  9/1/06<br>
+First full public release.<br>
+<br>
+<b>Known Issues:</b><br>
+The FPC/FPC mapping mode of this release is known to have
+problems with MySQL 5.0.26, and possibly earlier releases.  
+<br>
+<br>
+</font>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <hr>
+          </td>
+        </tr>
+
+        <tr>
+          <td style='padding-left:10px;'>
+            <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+            <b>Reference</b>
+            </font>
+          </td>
+        </tr>
+        <tr>  
+          <td style='padding-left:30px;'>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+C. Soderlund, W. Nelson, A. Shoemaker and A. Paterson (2006)
+SyMAP: A system for discovering and viewing syntenic regions of FPC maps.
+Genome Research 16:1159-1168. <a href="/software/symap/symap.pdf">Download</a>
+</font>
+<br><br>       
+          </td>
+        </tr>
+
+     </table>
+
+    </td>
+  </tr>
+        <tr>
+          <td bgcolor="#DDDDDD" align="center">
+            <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Email: 
+            <a href="mailto:symap@agcol.arizona.edu">symap@agcol.arizona.edu</a></font>
+          </td>
+        </tr>
+</table>
+
+		</td>
+	</tr>
+
+</table>
+
+<center>
+
+<div style='font-size:85%;'>
+
+
+Last Modified Wednesday May 28, 2014 10:45 AM and 59 seconds 
+</div>
+</center>
+
+</BODY>
+</HTML>
